@@ -1,6 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaCartPlus } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
+import axios from "axios"
 const NewProduct = () => {
+
+  const initialValue={
+    name: "",
+    price: 0,
+    amount: 0,
+    image: "",
+    dampingRate: 0.8,
+  }
+
+  const BASE_URL="https://66a76a3c53c13f22a3cfa21e.mockapi.io/products"
+
+  const [formData,setFormData]=useState(initialValue)
+  const navigate=useNavigate()
+
+  const handleSubmit=async(e)=>{
+    e.preventDefault()
+    await axios.post(BASE_URL, formData)
+
+    setFormData(initialValue)
+    navigate("/products") 
+
+
+  }
+
+
   return <div className="container p-5 text-light new-product-container mt-5 rounded-4">
 
 <form>
