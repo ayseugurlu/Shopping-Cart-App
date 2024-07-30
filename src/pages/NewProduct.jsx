@@ -22,7 +22,7 @@ const NewProduct = () => {
     await axios.post(BASE_URL, formData)
 
     setFormData(initialValue)
-    navigate("/products") 
+    navigate("/product-list") 
 
 
   }
@@ -30,7 +30,7 @@ const NewProduct = () => {
 
   return <div className="container p-5 text-light new-product-container mt-5 rounded-4">
 
-<form>
+<form onSubmit={handleSubmit}>
   <div className="mb-3">
     <label htmlFor="product-name" className="form-label">
       Product Name
@@ -40,6 +40,7 @@ const NewProduct = () => {
       className="form-control"
       id="product-name"
       required
+      onChange={(e)=>setFormData({...formData,name:e.target.value})}
     />
 
 <div className="mb-3">
@@ -51,6 +52,7 @@ const NewProduct = () => {
       className="form-control"
       id="product-price"
       required
+      onChange={(e)=>setFormData({...formData,price:e.target.value})}
       
     />
   </div>
@@ -65,6 +67,7 @@ const NewProduct = () => {
       className="form-control"
       id="product-quantity"
       required
+      onChange={(e)=>setFormData({...formData,amount:e.target.value})}
     />
   </div>
   <div className="mb-3">
@@ -73,7 +76,9 @@ const NewProduct = () => {
     </label>
     <div className="input-group mb-3">
       <span className="input-group-text"  id="image-example">https://example.com/</span>
-      <input type="url" className="form-control" id="product-image" aria-describedby="image-example" required/>
+      <input type="url" className="form-control" id="product-image" aria-describedby="image-example" required
+        onChange={(e)=>setFormData({...formData,image:e.target.value})}
+      />
     </div>
   </div>
   

@@ -9,10 +9,10 @@ const Main = () => {
     <main className="main">
       <div>
         <h1>Welcome to My Shopping Cart</h1>
-        <div className="main-buttons">
+        <div className="main-buttons d-flex justify-content-center">
           <button
           onClick={()=>navigate("/new-product")}
-           className="btn btn-primary btn-outline-primary px-4">
+           className="btn btn-primary px-4">
             Add New Product
           </button>
           <button className="btn btn-primary px-4 ms-3" onClick={()=>navigate("/product-list")}>See Products</button>

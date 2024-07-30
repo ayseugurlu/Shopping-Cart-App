@@ -1,22 +1,31 @@
-<p>Clarusway<img align="right"
-  src="https://secure.meetupstatic.com/photos/event/3/1/b/9/600_488352729.jpeg"  width="15px"></p>
-
 # Shopping Cart
 
-## Description
+## Project Overview
 
-Project aims to create a Shopping Cart App.
+This project is a simple shopping cart application built using React. The application allows users to view, add, update, and delete products. It employs mock APIs to fetch and manage data, utilizing `axios` for HTTP requests. The project also features page navigation implemented with `react-router-dom`.
 
-## Problem Statement
+## Features
 
-- We are adding a new project to our portfolios. So you and your colleagues have started to work on the project.
+1. **View Products:** Users can view a list of available products.
+2. **Add Products:** Users can add new products to the list.
+3. **Update Products:** Users can edit the details of existing products.
+4. **Delete Products:** Users can remove products from the list.
+5. **Navigation:** Users can navigate between different pages of the application.
 
-## Project Skeleton
+## Technologies Used
+
+- **React:** For building the user interface.
+- **CSS:** For styling the components.
+- **HTML:** For structuring the web pages.
+- **Axios:** For making HTTP requests to the mock API.
+- **React Router:** For handling navigation between pages.
+
+## Project Structure
 
 ```
-Shopping Cart (folder)
+Shopping Cart
 |
-|----readme.md         # Given to the students (Definition of the project)
+|----readme.md
 SOLUTION
 ├── public
 │     └── index.html
@@ -40,60 +49,45 @@ SOLUTION
 
 ```
 
+## Demo
+
 ## Expected Outcome
 
 ![Shopping Cart](shopping-cart.gif)
 
-## Objective
+### Explanation of Key Files and Directories
 
-Build a Shopping Cart App using ReactJS.
+- **public/index.html:** The main HTML file that serves the React application.
+- **src/App.js:** The root component that configures routing and renders the main layout.
+- **src/components:** Contains reusable components like `CardTotal`, `Navbar`, `ProductCard`, and `ProductForm`.
+- **src/index.css:** The main CSS file for global styles.
+- **src/index.js:** The entry point of the React application, rendering the `App` component.
+- **src/pages:** Contains different page components like `About`, `Main`, `NewProduct`, `ProductList`, and `UpdateProduct`.
 
-### At the end of the project, following topics are to be covered;
+## Functionalities Implemented
 
-- HTML
+### Data Fetching with Axios
 
-- CSS
+- Mock API is used to simulate server-side operations.
+- `axios` is employed to make HTTP requests for fetching, adding, updating, and deleting product data.
 
-- JS
+### State Management with useState
 
-- ReactJS
+- `useState` is used to manage the state of products and form inputs.
 
-### At the end of the project, students will be able to;
+### Routing with React Router
 
-- improve coding skills within HTML & CSS & JS & ReactJS.
+- `react-router-dom` is used for navigating between different pages (`Main`, `About`, `NewProduct`, `ProductList`, and `UpdateProduct`).
+- `useNavigate` is used to programmatically navigate between pages.
+- `useLocation` is used to access the current location object, which contains information about the current URL. This is particularly useful for conditionally rendering components based on the current route or passing state between routes.
 
-- use git commands (push, pull, commit, add etc.) and Github as Version Control System.
+### Product Management
 
-## Steps to Solution
+- **Product List:** Displays a list of products fetched from the mock API.
+- **Add Product:** A form to add new products, updating the state and mock API.
+- **Update Product:** A form to edit existing product details, updating the state and mock API.
+- **Delete Product:** A feature to remove products from the list and mock API.
 
-- Step 1: Create React App using `npx create-react-app shopping-cart`
+### Conclusion
 
-- Step 2 : Install `"react-icons"` package to your `package.json` for icons or fontawesome cdn link paste to "public/index.html", install `axios` package and `react-router-dom`.
-
-- Step 3: Build Checkout Page App.
-
-- Step 4: You can use CSS frameworks like Bootstrap, Material UI etc.
-
-- Step 5: Push your application into your own public repo on Github
-
-- Step 6: Add project gif to your project and README.md file.
-
-## Notes
-
-- Watch the video and follow the steps to create an account and project on MockAPI.
-
-## Demo
-  <a href="https://shopping-cart-mockapi.vercel.app/" target="_blank">Shopping Cart</a>
-
-## MockApi
-
-<a href="https://mockapi.io/" target="_blank">MockApi</a>
-
-
-## How do we create mockApi? Watch the video!
-<a href="https://www.youtube.com/watch?v=i_Gvlp83GMk" target="_blank">
- Watch the video
-</a>
-
-
-**<p align="center">&#9786; Happy Coding &#9997;</p>**
+This project demonstrates the fundamental concepts of a CRUD (Create, Read, Update, Delete) application in React. It showcases how to use axios for API calls, useState for state management, and react-router-dom for navigation, including the use of useNavigate and useLocation. The modular structure and clear separation of components make the application easy to understand and extend.

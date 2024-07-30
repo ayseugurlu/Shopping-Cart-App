@@ -52,9 +52,9 @@ const About = () => {
                     Message
                   </a>
                 </button>
-                <button className="btn btn-success px-4 ms-3">
+                <button className="btn btn-outline-primary px-4 ms-3">
                   <a
-                    className="text-decoration-none text-white"
+                    className="text-decoration-none text-black"
                     href="https://github.com/ayseugurlu"
                     target="true">
                     Contact
